@@ -28,6 +28,12 @@ app.get("/contact",function(req,res){
     content += fs.readFileSync(__dirname + "/pages/footer.html").toString();
     res.send(content);
 });
+app.get("/courses",function(req,res){
+    let content = fs.readFileSync(__dirname + "/pages/header.html").toString();
+    content += fs.readFileSync(__dirname + "/pages/courses.html").toString();
+    content += fs.readFileSync(__dirname + "/pages/footer.html").toString();
+    res.send(content);
+});
 
 app.listen(8081,()=>{
     console.log("website running on 8081");
